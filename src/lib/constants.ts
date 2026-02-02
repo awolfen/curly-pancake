@@ -28,5 +28,14 @@ export const SKILLS: readonly string[] = [
 export const NAV_LINKS = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
+  {
+    label: "Projects",
+    href: "/projects",
+    children: [
+      { label: "Project 1", href: "/projects/project-1" },
+      { label: "Project 2", href: "/projects/project-2" },
+      { label: "Project 3", href: "/projects/project-3" },
+    ],
+  },
   { label: "Contact", href: "#contact" },
 ] as const;
