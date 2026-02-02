@@ -83,10 +83,12 @@ export default function Header() {
             )}
 
             {/* Social Links */}
-            <SocialLinks className="pl-4 border-l border-zinc-200 dark:border-zinc-700" />
+            <div className="pl-4 border-l border-zinc-200 dark:border-zinc-700 self-stretch flex items-center">
+              <SocialLinks />
+            </div>
 
             {/* Theme Toggle */}
-            <div className="pl-4 border-l border-zinc-200 dark:border-zinc-700">
+            <div className="pl-4 border-l border-zinc-200 dark:border-zinc-700 self-stretch flex items-center">
               <ThemeToggle />
             </div>
           </div>
