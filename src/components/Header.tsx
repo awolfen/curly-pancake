@@ -3,6 +3,7 @@
 import { ICONS } from "@/components/Icons";
 import SocialLinks from "@/components/SocialLinks";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { Divider } from "@/components/ui/Divider";
 import { NAV_LINKS, PERSONAL_INFO } from "@/lib/constants";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { closeMobileMenu, toggleMobileMenu } from "@/store/slices/uiSlice";
@@ -83,14 +84,12 @@ export default function Header() {
             )}
 
             {/* Social Links */}
-            <div className="pl-4 border-l border-zinc-200 dark:border-zinc-700 self-stretch flex items-center">
-              <SocialLinks />
-            </div>
+            <Divider />
+            <SocialLinks />
 
             {/* Theme Toggle */}
-            <div className="pl-4 border-l border-zinc-200 dark:border-zinc-700 self-stretch flex items-center">
-              <ThemeToggle />
-            </div>
+            <Divider />
+            <ThemeToggle />
           </div>
 
           {/* Mobile Menu Button */}
@@ -138,8 +137,10 @@ export default function Header() {
                   </Link>
                 ),
               )}
-              <SocialLinks className="pt-4 border-t border-zinc-200 dark:border-zinc-700" />
-              <div className="pt-4 border-t border-zinc-200 dark:border-zinc-700 flex items-center gap-2">
+              <Divider orientation="horizontal" />
+              <SocialLinks />
+              <Divider orientation="horizontal" />
+              <div className="flex items-center gap-2">
                 <span className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
                   Theme
                 </span>
