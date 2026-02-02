@@ -2,6 +2,7 @@
 
 import { ICONS } from "@/components/Icons";
 import SocialLinks from "@/components/SocialLinks";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { NAV_LINKS, PERSONAL_INFO } from "@/lib/constants";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { closeMobileMenu, toggleMobileMenu } from "@/store/slices/uiSlice";
@@ -83,6 +84,11 @@ export default function Header() {
 
             {/* Social Links */}
             <SocialLinks className="pl-4 border-l border-zinc-200 dark:border-zinc-700" />
+
+            {/* Theme Toggle */}
+            <div className="pl-4 border-l border-zinc-200 dark:border-zinc-700">
+              <ThemeToggle />
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -131,6 +137,12 @@ export default function Header() {
                 ),
               )}
               <SocialLinks className="pt-4 border-t border-zinc-200 dark:border-zinc-700" />
+              <div className="pt-4 border-t border-zinc-200 dark:border-zinc-700 flex items-center gap-2">
+                <span className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
+                  Theme
+                </span>
+                <ThemeToggle />
+              </div>
             </div>
           </div>
         )}

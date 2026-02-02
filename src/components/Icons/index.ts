@@ -1,4 +1,4 @@
-import { Close, Email, GitHub, LinkedIn, Menu } from "./Icons";
+import { Close, Email, GitHub, LinkedIn, Menu, Moon, Sun } from "./Icons";
 
 export const ICONS = {
   LinkedIn,
@@ -6,4 +6,6 @@ export const ICONS = {
   Email,
   Menu,
   Close,
+  Sun,
+  Moon,
 } as const;
