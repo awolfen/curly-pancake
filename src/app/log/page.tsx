@@ -17,7 +17,7 @@ const LOG_ENTRIES: LogEntry[] = [
     date: "2026-02-02",
     title: "Added Three.js Background Animation",
     content:
-      "Implemented an interactive particle field and floating wireframe geometry behind the hero section using Three.js and @react-three/fiber. While admittedly overkill for a portfolio site, it demonstrates knowledge of 3D graphics programming and WebGL. The animation includes 5,000 particles with mouse-tracking interactivity and three animated wireframe shapes (icosahedron, octahedron, and torus).",
+      "Implemented an interactive particle field behind the hero section using Three.js and @react-three/fiber. The animation includes 5,000 particles with mouse-tracking interactivity.",
     tags: ["Three.js", "Animation", "React Three Fiber"],
   },
   {

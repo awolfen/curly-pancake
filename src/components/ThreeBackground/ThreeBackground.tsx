@@ -70,24 +70,6 @@ function ParticleField() {
   );
 }
 
-function GradientPlane() {
-  const meshRef = useRef<THREE.Mesh>(null);
-
-  useFrame((state) => {
-    if (meshRef.current) {
-      const time = state.clock.getElapsedTime();
-      meshRef.current.rotation.z = Math.sin(time * 0.1) * 0.05;
-    }
-  });
-
-  return (
-    <mesh ref={meshRef} position={[0, 0, -5]} rotation={[0, 0, 0]}>
-      <planeGeometry args={[20, 20]} />
-      <meshBasicMaterial color="#0a0a0a" transparent opacity={0.5} />
-    </mesh>
-  );
-}
-
 export default function ThreeBackground() {
   return (
     <div className="absolute inset-0 w-full h-full" style={{ zIndex: 0 }}>
@@ -99,7 +81,6 @@ export default function ThreeBackground() {
       >
         <Suspense fallback={null}>
           <ambientLight intensity={0.5} />
-          <GradientPlane />
           <ParticleField />
         </Suspense>
       </Canvas>
