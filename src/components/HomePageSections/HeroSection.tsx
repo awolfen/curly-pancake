@@ -1,11 +1,19 @@
 "use client";
 
 import { PERSONAL_INFO } from "@/lib/constants";
+import dynamic from "next/dynamic";
+
+// Dynamically import Three.js background to avoid SSR issues
+const ThreeBackground = dynamic(
+  () => import("@/components/ThreeBackground/ThreeBackground"),
+  { ssr: false },
+);
 
 export default function HeroSection() {
   return (
-    <section className="min-h-[80vh] flex items-center justify-center px-6">
-      <div className="mx-auto max-w-3xl text-center">
+    <section className="relative min-h-[80vh] flex items-center justify-center px-6 overflow-hidden isolate">
+      <ThreeBackground />
+      <div className="relative z-10 mx-auto max-w-3xl text-center pointer-events-none">
         <p className="text-sm font-medium text-zinc-500 dark:text-zinc-400 mb-4">
           📍 {PERSONAL_INFO.location}
         </p>
@@ -18,7 +26,7 @@ export default function HeroSection() {
         <p className="text-lg md:text-xl text-zinc-600 dark:text-zinc-300 mb-8 leading-relaxed">
           {PERSONAL_INFO.intro}
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center pointer-events-auto">
           <a
             href="#contact"
             className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-zinc-900 text-white dark:bg-zinc-50 dark:text-zinc-900 font-medium hover:bg-zinc-700 dark:hover:bg-zinc-200 transition-colors"

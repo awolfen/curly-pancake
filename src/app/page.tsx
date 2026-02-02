@@ -3,7 +3,7 @@ import {
   ContactSection,
   HeroSection,
   SkillsSection,
-} from "@/components/sections";
+} from "@/components/HomePageSections";
 
 export default function Home() {
   return (
