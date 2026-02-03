@@ -1,10 +1,8 @@
 import { NextResponse } from "next/server";
-
-const API_BASE_URL = "https://api.balldontlie.io/v1";
-const API_KEY = process.env.BALLDONTLIE_APIKEY || "";
+import { NBA_API_BASE_URL, NBA_API_KEY } from "../config";
 
 export async function GET() {
-  if (!API_KEY) {
+  if (!NBA_API_KEY) {
     return NextResponse.json(
       { error: "API key not configured" },
       { status: 500 },
@@ -12,9 +10,9 @@ export async function GET() {
   }
 
   try {
-    const response = await fetch(`${API_BASE_URL}/teams`, {
+    const response = await fetch(`${NBA_API_BASE_URL}/teams`, {
       headers: {
-        Authorization: API_KEY,
+        Authorization: NBA_API_KEY,
       },
     });
 

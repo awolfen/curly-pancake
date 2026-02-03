@@ -1,10 +1,10 @@
-import { SectionHeading } from "./SectionHeading";
+import SectionHeading from "./SectionHeading";
 
 interface TechnologiesSectionProps {
   skills: string[];
 }
 
-export function TechnologiesSection({ skills }: TechnologiesSectionProps) {
+export default function TechnologiesSection({ skills }: TechnologiesSectionProps) {
   return (
     <>
       <SectionHeading>Technologies</SectionHeading>

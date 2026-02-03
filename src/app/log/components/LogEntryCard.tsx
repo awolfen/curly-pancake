@@ -5,7 +5,7 @@ interface LogEntryCardProps {
   entry: LogEntry;
 }
 
-export function LogEntryCard({ entry }: LogEntryCardProps) {
+export default function LogEntryCard({ entry }: LogEntryCardProps) {
   return (
     <article className="relative pl-8 border-l-2 border-zinc-200 dark:border-zinc-700">
       <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-gradient-to-r from-blue-600 to-violet-600" />

@@ -1,3 +1,4 @@
+import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { BackToHome } from "@/components/ui/BackToHome";
 import { NBAStatsChart } from "./NBAStatsChart";
 import { NBAStatsSkills } from "./consts";
@@ -26,7 +27,9 @@ export default function Project1() {
 
             {/* NBA Stats Chart Component */}
             <div className="not-prose mb-12">
-              <NBAStatsChart />
+              <ErrorBoundary>
+                <NBAStatsChart />
+              </ErrorBoundary>
             </div>
 
             <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-50 mt-12 mb-4">

@@ -5,7 +5,7 @@ interface AnimalImageDisplayProps {
   isLoading: boolean;
 }
 
-export function AnimalImageDisplay({
+export default function AnimalImageDisplay({
   image,
   isLoading,
 }: AnimalImageDisplayProps) {

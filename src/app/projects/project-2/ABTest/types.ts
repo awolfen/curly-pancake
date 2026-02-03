@@ -1,13 +1,5 @@
 export type AnimalType = "cat" | "dog";
 
-export interface ABTestSession {
-  id: string;
-  animalType: AnimalType;
-  picturesViewed: number;
-  startedAt: Date;
-  endedAt?: Date;
-}
-
 export interface ABTestResults {
   catSessions: number;
   dogSessions: number;

@@ -1,4 +1,4 @@
-import { SectionHeading } from "./SectionHeading";
+import SectionHeading from "./SectionHeading";
 
 const features = [
   "Random 50/50 assignment to cat or dog group",
@@ -8,7 +8,7 @@ const features = [
   "Responsive design with dark mode support",
 ];
 
-export function KeyFeaturesSection() {
+export default function KeyFeaturesSection() {
   return (
     <>
       <SectionHeading>Key Features</SectionHeading>

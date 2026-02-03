@@ -6,7 +6,7 @@ interface ResultsDisplayProps {
   userPicturesViewed: number;
 }
 
-export function ResultsDisplay({
+export default function ResultsDisplay({
   results,
   userAnimalType,
   userPicturesViewed,

@@ -1,6 +1,6 @@
-import { SectionHeading } from "./SectionHeading";
+import SectionHeading from "./SectionHeading";
 
-export function AboutSection() {
+export default function AboutSection() {
   return (
     <>
       <SectionHeading>About This Experiment</SectionHeading>

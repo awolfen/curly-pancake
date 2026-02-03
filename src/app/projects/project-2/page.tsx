@@ -1,3 +1,4 @@
+import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { BackToHome } from "@/components/ui/BackToHome";
 import { ABTest } from "./ABTest";
 import {
@@ -28,7 +29,9 @@ export default function Project2() {
             />
 
             <div className="not-prose mb-12">
-              <ABTest />
+              <ErrorBoundary>
+                <ABTest />
+              </ErrorBoundary>
             </div>
 
             <AboutSection />

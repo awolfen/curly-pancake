@@ -20,8 +20,8 @@ export default function LogPage() {
         </p>
 
         <div className="space-y-12">
-          {LOG_ENTRIES.map((entry, index) => (
-            <LogEntryCard key={index} entry={entry} />
+          {LOG_ENTRIES.map((entry) => (
+            <LogEntryCard key={`${entry.date}-${entry.title}`} entry={entry} />
           ))}
         </div>
       </div>

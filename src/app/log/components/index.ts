@@ -1,1 +1,1 @@
-export { LogEntryCard } from "./LogEntryCard";
+export { default as LogEntryCard } from "./LogEntryCard";

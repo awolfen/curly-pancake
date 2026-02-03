@@ -1,5 +1,6 @@
 "use client";
 
+import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { PERSONAL_INFO } from "@/lib/constants";
 import dynamic from "next/dynamic";
 
@@ -12,7 +13,9 @@ const ThreeBackground = dynamic(
 export default function HeroSection() {
   return (
     <section className="relative min-h-[80vh] flex items-center justify-center px-6 overflow-hidden isolate">
-      <ThreeBackground />
+      <ErrorBoundary fallback={null}>
+        <ThreeBackground />
+      </ErrorBoundary>
       <div className="relative z-10 mx-auto max-w-3xl text-center pointer-events-none">
         <p className="text-sm font-medium text-zinc-500 dark:text-zinc-400 mb-4">
           📍 {PERSONAL_INFO.location}

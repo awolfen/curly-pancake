@@ -1,4 +1,4 @@
-import SocialLinks from "@/components/ui/Divider/SocialLinks";
+import { SocialLinks } from "@/components/ui/SocialLinks";
 
 export default function ContactSection() {
   return (

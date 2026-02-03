@@ -23,18 +23,6 @@ export interface Game {
   visitor_team: Team;
 }
 
-export interface TeamsResponse {
-  data: Team[];
-}
-
-export interface GamesResponse {
-  data: Game[];
-  meta: {
-    next_cursor?: number;
-    per_page: number;
-  };
-}
-
 export interface WinData {
   gamesPlayed: number;
   wins: number;

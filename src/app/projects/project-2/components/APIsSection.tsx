@@ -1,4 +1,4 @@
-import { SectionHeading } from "./SectionHeading";
+import SectionHeading from "./SectionHeading";
 
 interface APILink {
   name: string;
@@ -19,7 +19,7 @@ const apiLinks: APILink[] = [
   },
 ];
 
-export function APIsSection() {
+export default function APIsSection() {
   return (
     <>
       <SectionHeading>APIs Used</SectionHeading>

@@ -2,21 +2,23 @@ import { ICONS } from "@/components/Icons";
 import { PERSONAL_INFO } from "@/lib/constants";
 import { SocialLinksProps } from "../SocialLinks";
 
-const SocialLinksButtons = ({
+export default function SocialLinksButtons({
   className = "",
   showEmail = false,
-}: SocialLinksProps) => {
+}: SocialLinksProps) {
   return (
     <div
       className={`flex flex-col sm:flex-row gap-4 justify-center ${className}`}
     >
-      <a
-        href={`mailto:${PERSONAL_INFO.email}`}
-        className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-zinc-900 text-white dark:bg-zinc-50 dark:text-zinc-900 font-medium hover:bg-zinc-700 dark:hover:bg-zinc-200 transition-colors"
-      >
-        <ICONS.Email />
-        Email Me
-      </a>
+      {showEmail && (
+        <a
+          href={`mailto:${PERSONAL_INFO.email}`}
+          className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-zinc-900 text-white dark:bg-zinc-50 dark:text-zinc-900 font-medium hover:bg-zinc-700 dark:hover:bg-zinc-200 transition-colors"
+        >
+          <ICONS.Email />
+          Email Me
+        </a>
+      )}
       <a
         href={PERSONAL_INFO.linkedIn}
         target="_blank"
@@ -37,6 +39,4 @@ const SocialLinksButtons = ({
       </a>
     </div>
   );
-};
-
-export default SocialLinksButtons;
+}

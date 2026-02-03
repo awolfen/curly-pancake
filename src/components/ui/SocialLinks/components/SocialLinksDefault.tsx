@@ -2,10 +2,10 @@ import { ICONS } from "@/components/Icons";
 import { PERSONAL_INFO } from "@/lib/constants";
 import { SocialLinksProps } from "../SocialLinks";
 
-const SocialLinksDefault = ({
+export default function SocialLinksDefault({
   className = "",
   showEmail = false,
-}: SocialLinksProps) => {
+}: SocialLinksProps) {
   return (
     <div className={`flex items-center gap-4 ${className}`}>
       <a
@@ -37,6 +37,4 @@ const SocialLinksDefault = ({
       )}
     </div>
   );
-};
-
-export default SocialLinksDefault;
+}

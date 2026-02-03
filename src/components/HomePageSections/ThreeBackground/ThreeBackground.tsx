@@ -2,36 +2,38 @@
 
 import { PointMaterial, Points } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Suspense, useEffect, useMemo, useRef } from "react";
+import { Suspense, useEffect, useRef } from "react";
 import * as THREE from "three";
 
-// Seeded random number generator for deterministic particle positions
-function seededRandom(seed: number): () => number {
-  return function () {
-    seed = (seed * 9301 + 49297) % 233280;
-    return seed / 233280;
-  };
+import {
+  CAMERA_FOV,
+  CAMERA_POSITION,
+  MOUSE_INFLUENCE,
+  PARTICLE_COLOR,
+  PARTICLE_COUNT,
+  PARTICLE_SIZE,
+  PARTICLE_SPREAD,
+  ROTATION_AMPLITUDE,
+  ROTATION_SPEED,
+} from "./consts";
+
+function generateParticlePositions(): Float32Array {
+  const positions = new Float32Array(PARTICLE_COUNT * 3);
+  for (let i = 0; i < PARTICLE_COUNT; i++) {
+    const x = (Math.random() - 0.5) * PARTICLE_SPREAD;
+    const y = (Math.random() - 0.5) * PARTICLE_SPREAD;
+    const z = (Math.random() - 0.5) * PARTICLE_SPREAD;
+    positions.set([x, y, z], i * 3);
+  }
+  return positions;
 }
+
+const PARTICLE_POSITIONS = generateParticlePositions();
 
 function ParticleField() {
   const ref = useRef<THREE.Points>(null);
   const mousePosition = useRef({ x: 0, y: 0 });
 
-  // Generate deterministic positions for particles using seeded random
-  const particleCount = 5000;
-  const positions = useMemo(() => {
-    const random = seededRandom(42); // Fixed seed for consistent results
-    const positions = new Float32Array(particleCount * 3);
-    for (let i = 0; i < particleCount; i++) {
-      const x = (random() - 0.5) * 10;
-      const y = (random() - 0.5) * 10;
-      const z = (random() - 0.5) * 10;
-      positions.set([x, y, z], i * 3);
-    }
-    return positions;
-  }, []);
-
-  // Track mouse movement for interactive effect
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
       mousePosition.current.x = (event.clientX / window.innerWidth) * 2 - 1;
@@ -41,27 +43,30 @@ function ParticleField() {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  // Animate the particle field
   useFrame((state) => {
     if (!ref.current) return;
 
     const time = state.clock.getElapsedTime();
 
-    // Gentle rotation based on time
-    ref.current.rotation.x = Math.sin(time * 0.1) * 0.2;
-    ref.current.rotation.y = time * 0.05;
+    ref.current.rotation.x =
+      Math.sin(time * MOUSE_INFLUENCE) * ROTATION_AMPLITUDE;
+    ref.current.rotation.y = time * ROTATION_SPEED;
 
-    // Subtle movement based on mouse position
-    ref.current.rotation.x += mousePosition.current.y * 0.1;
-    ref.current.rotation.y += mousePosition.current.x * 0.1;
+    ref.current.rotation.x += mousePosition.current.y * MOUSE_INFLUENCE;
+    ref.current.rotation.y += mousePosition.current.x * MOUSE_INFLUENCE;
   });
 
   return (
-    <Points ref={ref} positions={positions} stride={3} frustumCulled={false}>
+    <Points
+      ref={ref}
+      positions={PARTICLE_POSITIONS}
+      stride={3}
+      frustumCulled={false}
+    >
       <PointMaterial
         transparent
-        color="#6366f1"
-        size={0.015}
+        color={PARTICLE_COLOR}
+        size={PARTICLE_SIZE}
         sizeAttenuation={true}
         depthWrite={false}
         blending={THREE.AdditiveBlending}
@@ -74,7 +79,7 @@ export default function ThreeBackground() {
   return (
     <div className="absolute inset-0 w-full h-full" style={{ zIndex: 0 }}>
       <Canvas
-        camera={{ position: [0, 0, 5], fov: 60 }}
+        camera={{ position: CAMERA_POSITION, fov: CAMERA_FOV }}
         dpr={[1, 2]}
         gl={{ antialias: true, alpha: true }}
         style={{ background: "transparent", width: "100%", height: "100%" }}

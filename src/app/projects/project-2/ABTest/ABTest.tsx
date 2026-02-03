@@ -1,14 +1,14 @@
 "use client";
 
 import {
-    AnimalImageDisplay,
-    ErrorDisplay,
-    LoadingSpinner,
-    ResultsDisplay,
+  AnimalImageDisplay,
+  ErrorDisplay,
+  LoadingSpinner,
+  ResultsDisplay,
 } from "./components";
 import { useABTest } from "./hooks";
 
-export function ABTest() {
+export default function ABTest() {
   const {
     animalType,
     currentImage,

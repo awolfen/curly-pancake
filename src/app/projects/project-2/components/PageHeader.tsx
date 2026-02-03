@@ -3,7 +3,7 @@ interface PageHeaderProps {
   description: string[];
 }
 
-export function PageHeader({ title, description }: PageHeaderProps) {
+export default function PageHeader({ title, description }: PageHeaderProps) {
   return (
     <>
       <h1 className="text-4xl md:text-5xl font-bold text-zinc-900 dark:text-zinc-50 mb-6">

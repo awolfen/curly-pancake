@@ -3,7 +3,7 @@ interface ErrorDisplayProps {
   onRetry?: () => void;
 }
 
-export function ErrorDisplay({ message, onRetry }: ErrorDisplayProps) {
+export default function ErrorDisplay({ message, onRetry }: ErrorDisplayProps) {
   return (
     <div className="flex flex-col items-center justify-center p-8 bg-red-50 dark:bg-red-900/20 rounded-lg">
       <p className="text-red-600 dark:text-red-400 mb-4">{message}</p>
