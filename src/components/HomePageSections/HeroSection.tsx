@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 
 // Dynamically import Three.js background to avoid SSR issues
 const ThreeBackground = dynamic(
-  () => import("@/components/ThreeBackground/ThreeBackground"),
+  () => import("@/components/HomePageSections/ThreeBackground/ThreeBackground"),
   { ssr: false },
 );
 

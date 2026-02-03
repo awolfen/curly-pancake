@@ -1,4 +1,4 @@
-import SocialLinks from "@/components/SocialLinks";
+import SocialLinks from "@/components/ui/Divider/SocialLinks";
 import { NAV_LINKS, PERSONAL_INFO } from "@/lib/constants";
 import Link from "next/link";
 

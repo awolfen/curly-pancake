@@ -1,9 +1,9 @@
 "use client";
 
 import { ICONS } from "@/components/Icons";
-import SocialLinks from "@/components/SocialLinks";
-import { ThemeToggle } from "@/components/ThemeToggle";
 import { Divider } from "@/components/ui/Divider";
+import SocialLinks from "@/components/ui/Divider/SocialLinks";
+import { ThemeToggle } from "@/components/ui/Divider/ThemeToggle";
 import { NAV_LINKS, PERSONAL_INFO } from "@/lib/constants";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { closeMobileMenu, toggleMobileMenu } from "@/store/slices/uiSlice";
