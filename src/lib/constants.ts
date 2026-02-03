@@ -26,8 +26,6 @@ export const SKILLS: readonly string[] = [
 ];
 
 export const NAV_LINKS = [
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
   {
     label: "Projects",
     href: "/projects",
@@ -38,5 +36,4 @@ export const NAV_LINKS = [
     ],
   },
   { label: "Log", href: "/log" },
-  { label: "Contact", href: "#contact" },
 ] as const;

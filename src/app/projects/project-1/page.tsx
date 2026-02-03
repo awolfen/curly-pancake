@@ -13,13 +13,13 @@ export default function Project1() {
           </Link>
 
           <h1 className="text-4xl md:text-5xl font-bold text-zinc-900 dark:text-zinc-50 mb-6">
-            Project 1
+            Data Visualization Dashboard
           </h1>
 
           <div className="prose prose-zinc dark:prose-invert max-w-none">
             <p className="text-lg text-zinc-600 dark:text-zinc-300 mb-6">
-              This is a placeholder for Project 1. Add your project description,
-              technologies used, and key features here.
+              This is a placeholder for the Data Visualization Dashboard
+              project.
             </p>
 
             <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-50 mt-12 mb-4">
@@ -33,7 +33,7 @@ export default function Project1() {
               Technologies
             </h2>
             <div className="flex flex-wrap gap-2 mb-6">
-              {["React", "TypeScript", "Node.js"].map((tech) => (
+              {["React", "TypeScript", "API"].map((tech) => (
                 <span
                   key={tech}
                   className="px-3 py-1 text-sm rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300"
@@ -47,9 +47,9 @@ export default function Project1() {
               Key Features
             </h2>
             <ul className="list-disc list-inside text-zinc-600 dark:text-zinc-300 space-y-2">
-              <li>Feature 1</li>
-              <li>Feature 2</li>
-              <li>Feature 3</li>
+              <li>API Integration</li>
+              <li>Interactive Charts</li>
+              <li>Real-time Data Updates</li>
             </ul>
           </div>
         </div>

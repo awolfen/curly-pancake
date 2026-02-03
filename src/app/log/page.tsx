@@ -24,15 +24,15 @@ const LOG_ENTRIES: LogEntry[] = [
     date: "2026-02-02",
     title: "Dark/Light Theme Toggle",
     content:
-      "Added a theme selector using next-themes for proper SSR support and flash-of-unstyled-content prevention. Chose next-themes over a pure Redux implementation due to its built-in handling of hydration, localStorage persistence, and system preference detection.",
+      "Added a theme selector using next-themes. Chose next-themes over a pure Redux implementation due to its built-in handling of hydration, localStorage persistence, and system preference detection.",
     tags: ["Theming", "next-themes", "UX"],
   },
   {
-    date: "2026-02-02",
+    date: "30-01-2026",
     title: "Initial Website Launch",
     content:
-      "Launched the portfolio website built with Next.js 16, React 19, TypeScript, and Tailwind CSS v4. Using Redux Toolkit for state management. The site features a responsive design with mobile navigation support.",
-    tags: ["Next.js", "React", "Launch"],
+      "Launched the portfolio website built with Next, React, and Tailwind CSS. Using Redux Toolkit for state management.",
+    tags: ["Next.js", "React", "Tailwind CSS", "Redux"],
   },
 ];
 
