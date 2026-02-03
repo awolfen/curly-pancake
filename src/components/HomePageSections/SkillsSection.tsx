@@ -1,5 +1,3 @@
-"use client";
-
 import { SKILLS } from "@/lib/constants";
 
 export default function SkillsSection() {

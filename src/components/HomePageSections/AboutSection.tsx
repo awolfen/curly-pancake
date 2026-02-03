@@ -1,5 +1,3 @@
-"use client";
-
 import { PERSONAL_INFO } from "@/lib/constants";
 
 export default function AboutSection() {
