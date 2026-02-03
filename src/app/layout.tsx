@@ -2,6 +2,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Providers from "@/components/Providers";
 import { PERSONAL_INFO } from "@/lib/constants";
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
@@ -80,6 +81,7 @@ export default function RootLayout({
           <Footer />
         </Providers>
       </body>
+      <Analytics />
     </html>
   );
 }
