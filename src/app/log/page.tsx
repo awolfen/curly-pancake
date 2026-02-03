@@ -28,7 +28,7 @@ const LOG_ENTRIES: LogEntry[] = [
     tags: ["Theming", "next-themes", "UX"],
   },
   {
-    date: "30-01-2026",
+    date: "2026-01-30",
     title: "Initial Website Launch",
     content:
       "Launched the portfolio website built with Next, React, and Tailwind CSS. Using Redux Toolkit for state management.",
