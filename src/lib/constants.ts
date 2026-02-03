@@ -29,7 +29,10 @@ export const NAV_LINKS = [
   {
     label: "Projects",
     href: "/projects",
-    children: [{ label: "NBA Stats Chart", href: "/projects/project-1" }],
+    children: [
+      { label: "NBA Stats Chart", href: "/projects/project-1" },
+      { label: "A/B Testing", href: "/projects/project-2" },
+    ],
   },
   { label: "Log", href: "/log" },
 ] as const;
