@@ -2,7 +2,7 @@ import { SKILLS } from "@/lib/constants";
 
 export default function SkillsSection() {
   return (
-    <section id="skills" className="py-24 px-6">
+    <section id="skills" className="py-24 px-6 bg-zinc-50 dark:bg-zinc-900">
       <div className="mx-auto max-w-3xl">
         <h2 className="text-3xl font-bold text-zinc-900 dark:text-zinc-50 mb-8">
           Skills & Technologies
