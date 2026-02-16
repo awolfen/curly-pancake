@@ -10,19 +10,24 @@ export const PERSONAL_INFO = {
 } as const;
 
 export const SKILLS: readonly string[] = [
-  "TypeScript",
-  "React.js",
-  "Next.js",
-  "Node.js",
+  "A/B Testing",
+  "API Integration",
   "AWS",
-  "DynamoDB",
-  "Git",
-  "REST APIs",
-  "Data Visualization",
   "Claude AI",
   "Cypress",
-  "Redux.js",
+  "Data Visualization",
+  "Docker",
+  "DynamoDB",
   "Express.js",
+  "Firebase",
+  "Git",
+  "Next.js",
+  "Node.js",
+  "PostgreSQL",
+  "React.js",
+  "Redux.js",
+  "Tailwind CSS",
+  "TypeScript",
 ];
 
 export const NAV_LINKS = [
@@ -32,6 +37,8 @@ export const NAV_LINKS = [
     children: [
       { label: "NBA Stats Chart", href: "/projects/project-1" },
       { label: "A/B Testing", href: "/projects/project-2" },
+      { label: "Carbon Portfolio", href: "/projects/project-3" },
+      { label: "Private Markets API", href: "/projects/project-4" },
     ],
   },
   { label: "Log", href: "/log" },

@@ -58,7 +58,7 @@ export default function Header() {
                   </button>
                   {projectsDropdownOpen && (
                     <div className="absolute top-full left-0 pt-2">
-                      <div className="w-40 bg-white dark:bg-zinc-800 rounded-lg shadow-lg border border-zinc-200 dark:border-zinc-700 py-2">
+                      <div className="w-48 bg-white dark:bg-zinc-800 rounded-lg shadow-lg border border-zinc-200 dark:border-zinc-700 py-2">
                         {link.children.map((child) => (
                           <Link
                             key={child.href}
